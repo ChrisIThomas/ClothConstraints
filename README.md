@@ -7,6 +7,6 @@ Place lwjgl.jar and natives folder in root.
 
 
 
-build:      ant build
+compile:    ant compile
 
 distribute: ant dist
