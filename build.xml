@@ -1,0 +1,18 @@
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="bin" />
+        <javac srcdir="src" destdir="bin">
+            <classpath>
+                <pathelement location="lwjgl.jar" />
+            </classpath>
+        </javac>
+    </target>
+    <target name="dist" depends="compile">
+        <jar jarfile="ClothTest.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="com.chrisithomas.clothtest.ClothTest" />
+                <attribute name="Class-Path" value="lwjgl.jar" />
+            </manifest>
+        </jar>
+    </target>
+</project>
